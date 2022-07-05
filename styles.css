@@ -142,6 +142,8 @@ form {
 }
 
 #message {
+    display: block;
+    margin: 15px auto;
     border: none;
     outline: none;
     border-radius: 5%;
@@ -149,6 +151,8 @@ form {
 }
 
 .input {
+    display: block;
+    margin: 15px auto;
     border: none;
     outline: none;
 }
@@ -164,6 +168,7 @@ form {
     border-radius: 10%;
     border: none;
     outline: none;
+    margin-bottom: 20px;
 }
 
 .button:hover {
