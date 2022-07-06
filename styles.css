@@ -11,7 +11,7 @@ body, html {
 }
 
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('img/large.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url('img/large.jpeg');
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
@@ -54,9 +54,9 @@ body, html {
 }
 
 #header-btn:hover {
-    border-color: #77b4fb;
+    border-color: #cde0f6;
     color: rgb(250, 221, 162);
-    box-shadow: 0 0.5em 0.5em -0.4em #8ad6ed;
+    box-shadow: 0 0.5em 0.5em -0.4em #a4edee;
     transform: translateY(-0.25em);
     cursor: pointer;
 }
@@ -90,6 +90,7 @@ body, html {
     border: 1px solid #ccc;
     margin-bottom: 50px;
     transition: 0.3s;
+    border-radius: 20px;
 }
 
 .card-header {
@@ -97,6 +98,7 @@ body, html {
     padding: 50px 10px;
     background: linear-gradient(to right, #7a41ff, #2ba0ff);
     color: #fff;
+    border-radius: 20px 20px 0 0;
 }
 
 h3 {
@@ -109,7 +111,7 @@ h3 {
 .card-body {
     padding: 30px 20px;
     text-align: center;
-    font-size: 18px;
+    font-size: 10px;
 }
 
 .card-body .btn {
@@ -121,6 +123,7 @@ h3 {
     text-decoration: none;
     padding: 10px 5px;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .card:hover {
@@ -133,7 +136,10 @@ form {
     display: table;
     margin: auto;
     text-align: center;
-    background-image: url('img/small.jpeg');
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url('img/small.jpeg');
+    background-size: cover;
+
+    background-color: #77b4fb;
     color: white;
     margin-bottom: 20px;
     margin-top: -60px;
@@ -148,6 +154,10 @@ form {
     outline: none;
     border-radius: 5%;
     border-color: transparent;
+}
+
+label {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .input {
@@ -177,20 +187,19 @@ form {
     cursor: pointer;
 }
 
-.footer-header {
-    text-align: center;
-    padding: 10px 10px;
-    background: linear-gradient(to right, #7a41ff, #2ba0ff);
-    color: #fff;
-    font-size: 30px;
-    margin-bottom: 50px;
-    width: 100%
-}
-
 footer {
     display: flex;
     justify-content: space-evenly;
     flex-flow: wrap;
+}
+
+.footer-header {
+    text-align: center;
+    background: linear-gradient(to right, #7a41ff, #2ba0ff);
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    width: 100%
 }
 
 #git {
@@ -289,6 +298,9 @@ span {
     .hero-image {
         height: 45%;
     }
+    h3 {
+        font-size: 1.3rem;
+    }
 }
 
 @media screen and (min-width: 1000px) {
@@ -305,7 +317,7 @@ span {
         height: 50%;
     }
     h3 {
-        font-size: 1.2rem;
+        font-size: 1.05rem;
     }
 }
 
