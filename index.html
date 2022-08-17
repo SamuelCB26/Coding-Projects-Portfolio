@@ -13,14 +13,35 @@
 </head>
 <body>
     <!--header start-->
+    <header>
+        <nav class="navbar">
+            <div class="name">Menu</div>
+            <a href="#" id="nav-toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div id="nav-items">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+<!--header start-->
+<!--hero start-->
+<div class="hero-container">
     <div class="hero-image">
         <div class="hero-text">
             <h1 id="hero-h1">Hi, I'm Sam Berry!</h1>
-            <p id="header-text">..and I'm a Front-End Developer</p>
-            <button id="header-btn">Contact Me</button>
+            <p id="hero-text">..and I'm a Junior Front-End Web Developer</p>
+            <button id="hero-btn">Contact Me</button>
         </div>
     </div>
-<!--header end-->
+</div>
+<!--hero end-->
 <!--cards start-->
 <div class="container">
     <div class="heading">
@@ -75,7 +96,7 @@
 </div>
 <!--cards end-->
 <!--form start-->
-    <form action="#">
+    <form action="#" id="form">
         <h3>Send a message</h3>
         <label for="first">First Name</label>
         <input class="input" type="text" name="firstName" id="first">
@@ -99,5 +120,6 @@
 <br />
 <br />
 <p><span>&copy; Copyright Sam Berry 2022</span></p>
+<script src="script.js"></script>
 </body>
 </html>

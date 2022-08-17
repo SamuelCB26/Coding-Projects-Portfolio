@@ -10,12 +10,71 @@ body, html {
     background: #fefefe;
 }
 
-.hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url('img/large.jpeg');
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
+    background-color: rgb(39, 39, 39);
+    color: white;
+    padding: 0;
+}
+
+.name {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+}
+
+#nav-items {
+    height: 100%;
+}
+
+#nav-items ul {
+    display: flex;
+    list-style-type: none;
+}
+
+#nav-items li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1.2rem;
+}
+
+#nav-items li:hover {
+    background-color: rgb(17, 16, 16);
+}
+
+#nav-toggle-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 33px;
+    height: 21px;
+}
+
+#nav-toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.hero-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url('img/large.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+
+.hero-image {
     height: 40%;
 }
 
@@ -35,7 +94,7 @@ body, html {
     font-size: 1.5rem;
 }
 
-#header-text {
+#hero-text {
     font-size: 0.8rem;
     padding: 5px;
     margin-bottom: 20px;
@@ -43,8 +102,8 @@ body, html {
     color:rgb(234, 243, 249)
 }
 
-#header-btn {
-    background: none;
+#hero-btn {
+    background: linear-gradient(to right, #7a41ff, #2ba0ff);
     color: #f7f4f2;
     border: 1px solid;
     padding: 0.2em 0.8em;
@@ -53,10 +112,10 @@ body, html {
     transition: all 0.25s;
 }
 
-#header-btn:hover {
+#hero-btn:hover {
     border-color: #cde0f6;
     color: rgb(250, 221, 162);
-    box-shadow: 0 0.5em 0.5em -0.4em #a4edee;
+    box-shadow: 0 0.5em 0.5em -0.4em white;
     transform: translateY(-0.25em);
     cursor: pointer;
 }
@@ -165,23 +224,16 @@ label {
     margin: 15px auto;
     border: none;
     outline: none;
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
 }
 
-.button {
+#formBtn {
     color: #fff;
     text-align: center;
-    background: linear-gradient(to right, #7a41ff, #2ba0ff);
-    margin-top: 15px;
-    text-decoration: none;
-    padding: 10px 20px;
     cursor: pointer;
-    border-radius: 10%;
-    border: none;
-    outline: none;
-    margin-bottom: 20px;
 }
 
-.button:hover {
+#formBtn:hover {
     transform: scale(1.1);
     box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
     cursor: pointer;
@@ -256,6 +308,47 @@ span {
 
 /*responsive CSS*/
 
+@media (max-width: 720px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #nav-toggle-button {
+        display: flex;
+    }
+
+    #nav-items {
+        display: none;
+        width: 100%;
+    }
+
+    #nav-items ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #nav-items ul li {
+        text-align: center;
+    }
+
+    #nav-items ul li a {
+        padding: 0.5rem 1rem;
+    }
+
+    #nav-items.active {
+        display: flex;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .card {
         width: 40%;
@@ -289,10 +382,10 @@ span {
     #hero-h1 {
         font-size: 2.5rem;
     }
-    #header-text {
+    #hero-text {
         font-size: 1.2rem;
     }
-    #header-btn {
+    #hero-btn {
         font-size: 1.2rem;
     }
     .hero-image {
@@ -307,10 +400,10 @@ span {
     #hero-h1 {
         font-size: 3rem;
     }
-    #header-text {
+    #hero-text {
         font-size: 1.5rem;
     }
-    #header-btn {
+    #hero-btn {
         font-size: 1.2rem;
     }
     .hero-image {
